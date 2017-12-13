@@ -21,7 +21,16 @@
     "type": "git",
     "url": "https://github.com/Nargonath/twitter-auth-await.git"
   },
-  "keywords": ["async", "await", "twitter", "auth", "twitter-auth", "twitter-api"],
+  "keywords": [
+    "async",
+    "await",
+    "twitter",
+    "auth",
+    "twitter-auth",
+    "twitter-api",
+    "twitter-authentication",
+    "async-await"
+  ],
   "author": "Nargonath <jonas.pauthier@gmail.com>",
   "license": "MIT",
   "bugs": {
