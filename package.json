@@ -1,0 +1,67 @@
+{
+  "name": "twitter-auth-await",
+  "version": "0.0.0-development",
+  "description": "Twitter auth library for async/await users",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.9.3"
+  },
+  "scripts": {
+    "start": "nodemon lib/index.js --exec babel-node",
+    "debug": "nodemon --inspect lib/index.js --exec babel-node",
+    "lint": "eslint \"{{lib,test}/**/*.js,*.js}\" ",
+    "build": "babel lib -d dist -s --delete-dir-on-start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged",
+    "cm": "git-cz",
+    "commitmsg": "commitlint -e",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nargonath/twitter-auth-await.git"
+  },
+  "keywords": ["async", "await", "twitter", "auth", "twitter-auth", "twitter-api"],
+  "author": "Nargonath <jonas.pauthier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nargonath/twitter-auth-await/issues"
+  },
+  "homepage": "https://github.com/Nargonath/twitter-auth-await#readme",
+  "lint-staged": {
+    "{{lib,test}/**/*.js,*.js}": [
+      "prettier-eslint --write --print-width 100 --trailing-comma all --single-quote",
+      "eslint",
+      "git add"
+    ],
+    "{{lib,test}/**/*.json,*.json}": [
+      "prettier-eslint --write --print-width 100 --trailing-comma all --single-quote",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "5.2.5",
+    "@commitlint/config-conventional": "5.2.3",
+    "@dixeed/eslint-config": "2.0.0",
+    "babel-cli": "7.0.0-beta.3",
+    "babel-plugin-module-resolver": "3.0.0",
+    "babel-preset-env": "1.6.1",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.1.0",
+    "eslint": "4.13.1",
+    "husky": "0.14.3",
+    "lint-staged": "6.0.0",
+    "nodemon": "1.12.5",
+    "prettier-eslint": "8.3.1",
+    "prettier-eslint-cli": "4.6.1",
+    "semantic-release": "^8.2.0"
+  },
+  "dependencies": {
+    "oauth": "0.9.15"
+  }
+}
