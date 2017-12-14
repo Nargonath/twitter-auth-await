@@ -1,4 +1,4 @@
 {
   "presets": [["env", { "targets": { "node": "8.9.0" } }]],
-  "plugins": [["module-resolver", { "root": "./lib" }]]
+  "plugins": [["module-resolver", { "root": "./lib" }], "transform-class-properties"]
 }
