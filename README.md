@@ -14,9 +14,11 @@
 # Installation
 
 NPM:
+
 `npm install -S twitter-auth-await`
 
 Yarn:
+
 `yarn add twitter-auth-await`
 
 ## Requirements
@@ -51,7 +53,7 @@ Process the token retrieved from the previous step to obtain the access token wh
 
 * `oAuthToken` - the token sent back to your callback (if submitted) when the authorization workflow is successful. **required**
 * `oAuthTokenVerifier` - the token verifier sent along the `oAuthToken`. **required**
-* `returns` an object with the following properties:
+* `returns` a promise resolving an object with the following properties:
   * `accessToken` - the access token needed to access the user's protected Twitter resources.
   * `accessTokenSecret` - the access token secret.
   * `userId` - Twitter's user id.
