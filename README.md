@@ -19,6 +19,10 @@ NPM:
 Yarn:
 `yarn add twitter-auth-await`
 
+## Requirements
+
+This library is made to run on **Node >= 8.x**.
+
 # Auth workflow supported
 
 Currently the library **only supports Twitter's OAuth 1.0a workflow** as I didn't need the others. If you'd like to have other workflow supported by this library, please feel free to file an issue for it.
